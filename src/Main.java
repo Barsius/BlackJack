@@ -1,10 +1,21 @@
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args){
 
+
+        Game game = new Game();
+
+        //Player player = new Player();
+
+        /*
         Deck deck = new Deck();
-        for (int i = 0; i < deck.cards.length; i++) {
-            System.out.println("Card: " + deck.cards[i].Name + ", suit: " + deck.cards[i].getSuit() + ", cost: " + deck.cards[i].cost);
-        }
+        Random random = new Random();
+
+        Dealer dealer = new Dealer(deck, random);
+        dealer.firstMove();
+        dealer.play();
+         */
     }
 }

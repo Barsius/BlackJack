@@ -1,4 +1,6 @@
-class Card {
+package Cards;
+
+public class Card {
     final private int DIAMONDS = 0;
     final private int HEARTS = 1;
     final private int SPADES = 2;
@@ -18,11 +20,13 @@ class Card {
         Name = name;
     }
 
-    int getCost(){
+    public int getCost(){
         return cost;
     };
 
-    String getSuit (){
+    public String getSuit (){
         return Suit;
     }
+
+    public String getName(){return Name;};
 }

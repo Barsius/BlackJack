@@ -1,6 +1,10 @@
+package Cards;
+
+import Cards.Card;
+
 public class Queen extends Card {
 
-    Queen(int suit){
+    public Queen(int suit){
         super(10, suit, "Queen");
     }
 

@@ -1,8 +1,14 @@
+import Cards.*;
+
 public class Deck {
 
-    Card [] cards = new Card[52];
+    Card[] cards = new Card[52];
 
     Deck(){
+        this.FillDeck();
+    }
+
+    void FillDeck(){
         int count = -1;
         for (int i = 0; i < 4; i++){
             cards[++count] = new Two(i);
@@ -20,5 +26,4 @@ public class Deck {
             cards[++count] = new Ace(i);
         }
     }
-
 }

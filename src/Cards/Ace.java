@@ -1,5 +1,7 @@
+package Cards;
+
 public class Ace extends Card {
-    Ace(int suit){
+    public Ace(int suit){
         super(11, suit, "Ace");
     }
 }
