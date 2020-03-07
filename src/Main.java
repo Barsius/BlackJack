@@ -2,8 +2,9 @@ public class Main {
 
     public static void main(String[] args){
 
-        Box box = new Box(5, 4, 3);
-        System.out.println(box.GetV());
-
+        Deck deck = new Deck();
+        for (int i = 0; i < deck.cards.length; i++) {
+            System.out.println("Card : " + deck.cards[i].Name + ", suit: " + deck.cards[i].getSuit() + ", cost: " + deck.cards[i].cost);
+        }
     }
 }
