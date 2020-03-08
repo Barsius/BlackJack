@@ -12,10 +12,10 @@ public class Card {
     Card(int cost, int suit, String name){
         this.cost = cost;
         switch (suit){
-            case DIAMONDS: Suit = "Diamonds"; break;
-            case HEARTS: Suit = "Hearts"; break;
-            case SPADES: Suit = "Spades"; break;
-            case CLUBS: Suit = "Clubs"; break;
+            case DIAMONDS: Suit = "♦"; break;
+            case HEARTS: Suit = "♥"; break;
+            case SPADES: Suit = "♠"; break;
+            case CLUBS: Suit = "♣"; break;
         }
         Name = name;
     }

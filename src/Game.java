@@ -14,23 +14,42 @@ public class Game {
             if (scanner.nextInt() == 1) {
                 dealer.firstMove();
                 player.firstMove();
+                BlackJack();
                 player.play();
-                if (player.getPoints() < 21) {
-                    dealer.play();
-                    if (dealer.getPoints() < 21) {
-                        if (player.getPoints() > dealer.getPoints()) System.out.println("Player wins");
-                        else if (player.getPoints() < dealer.getPoints()) System.out.println("Dealer wins");
-                        else System.out.println("Draw");
-                    } else System.out.println("Player wins");
-                } else if (player.getPoints() == 21) {
-                    if (dealer.getPoints() == 21) {
-                        System.out.println("Draw");
-                    } else System.out.println("Player wins");
-                } else System.out.println("Player busted");
-                player.resetPoints();
-                dealer.resetPoints();
+                dealer.play();
+                int pp = player.getPoints();
+                int dp = dealer.getPoints();
+                if(pp <= 21 & (pp > dp || dp > 21)) System.out.println("Player wins");
+                else if(pp == dp && pp < 21) System.out.println("Draw");
+                else System.out.println("Player lose");
+                reset();
             }
             else return;
         }
     }
+
+    void BlackJack(){
+        if (player.getPoints() == 21){
+            System.out.println("Player have a BlackJack");
+            dealer.firstMove();
+            if (dealer.getPoints() == 21) {
+                System.out.println("Draw");
+            }
+            else {
+                System.out.println("Player win with BlackJack");
+            }
+            reset();
+            continue;
+        }
+    }
+
+    void RegularGame(){
+
+    }
+
+    void reset(){
+        player.resetPoints();
+        dealer.resetPoints();
+    }
+
 }

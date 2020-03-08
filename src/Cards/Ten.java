@@ -4,6 +4,6 @@ import Cards.Card;
 
 public class Ten extends Card {
     public Ten(int suit){
-        super(10, suit, "Ten");
+        super(10, suit, "10");
     }
 }

@@ -5,7 +5,7 @@ import Cards.Card;
 public class Five extends Card {
 
     public Five(int suit){
-        super(5, suit, "Five");
+        super(5, suit, "5");
     }
 
 }

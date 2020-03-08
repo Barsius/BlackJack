@@ -14,7 +14,7 @@ public class Dealer {
         do {
             int r = random.nextInt(52);
             points += deck.cards[r].getCost();
-            System.out.println("Dealer draw " + deck.cards[r].getName() + " " + deck.cards[r].getSuit() + " (" + deck.cards[r].getCost() + ")");
+            System.out.println("Dealer draw " + deck.cards[r].getName() + deck.cards[r].getSuit() + " (" + deck.cards[r].getCost() + ")");
             System.out.println("Dealer points: " + points);
         } while (points < 17);
         System.out.println("Dealer stops");
@@ -23,7 +23,7 @@ public class Dealer {
     void firstMove(){
         int r = random.nextInt(52);
         points += deck.cards[r].getCost();
-        System.out.println("Dealer draw " + deck.cards[r].getName() + " " + deck.cards[r].getSuit() + " (" + deck.cards[r].getCost() + ")");
+        System.out.println("Dealer draw " + deck.cards[r].getName() + deck.cards[r].getSuit() + " (" + deck.cards[r].getCost() + ")");
     }
 
     int getPoints(){
