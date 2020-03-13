@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -6,15 +7,19 @@ public class Game {
     Random random = new Random();
     Dealer dealer = new Dealer(deck, random);
     Player player = new Player(deck, random);
-    Scanner scanner = new Scanner(System.in);
 
     Game() {
         while (true) {
             System.out.println("Enter 1 if you want to continue");
-            if (scanner.nextInt() == 1){
-                if (!BlackJack()) RegularGame();
+            Scanner scanner = new Scanner(System.in);
+            try {
+                if (scanner.nextInt() == 1) {
+                    if (!BlackJack()) RegularGame();
+                }
+                else return;
+            } catch (InputMismatchException e){
+                System.out.println("You allowed to enter only numbers");
             }
-            else return;
         }
     }
 
