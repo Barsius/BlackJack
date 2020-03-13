@@ -40,7 +40,7 @@ public class Player {
                     }
                 } else return;
             } catch (InputMismatchException e){
-                System.out.println("You allowed to input only numbersss");
+                System.out.println("You allowed to input only numbers");
             }
         }
     }
